@@ -49,6 +49,7 @@ And for ZH
 ZH production:
 
     GEN: /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Generation
+         /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Generation/CMSSW_10_2_3/src/
     
     cmsrel CMSSW_10_2_3
     cd CMSSW_10_2_3/src
@@ -75,5 +76,11 @@ ZH production:
             --step LHE,GEN,SIM --geometry DB:Extended --era Run2_2018 --no_exec --mc -n $EVENTS
 
     cmsRun RunIIFall18wmLHEGS-00000_1_cfg.py
+ 
+ 
+Test LHE:
+
+    https://twiki.cern.ch/twiki/bin/viewauth/CMS/LHEReaderCMSSW
+    
     
     
