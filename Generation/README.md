@@ -140,6 +140,10 @@ Test LHE:
     
     r99t /tmp/amassiro/test.root    DrawVariable.cxx\(\"lhept\",10,0,30,\"1\"\)
 
+    r99t /tmp/amassiro/test.root    DrawVariable.cxx\(\"mbbLHE\",100,0,200,\"1\"\)
+
+    r99t /tmp/amassiro/test.root    DrawVariable.cxx\(\"mglugluLHE\",100,0,200,\"1\"\)
+
     
       
 GEN -> AOD 
