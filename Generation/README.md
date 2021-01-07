@@ -148,6 +148,12 @@ Test LHE:
     r99t /tmp/amassiro/test.root    DrawVariable.cxx\(\"mglugluLHE\",100,0,200,\"1\"\)
 
     
+    
+    
+        nEvents = cms.untracked.uint32(500),
+
+    Gluons are 21 (and not 9) for pythia
+    
       
 GEN -> AOD 
     
