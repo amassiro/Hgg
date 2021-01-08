@@ -154,6 +154,12 @@ Test LHE:
 
     Gluons are 21 (and not 9) for pythia
     
+    RunIIFall18wmLHEGS-00000-bb.root
+    RunIIFall18wmLHEGS-00000-Zlep-Hgluglu.root
+    RunIIFall18wmLHEGS-00000-gluglu.root
+    RunIIFall18wmLHEGS-00000.root ---> 500 events instead of 54
+    
+    
       
 GEN -> AOD 
     
