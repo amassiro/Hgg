@@ -160,6 +160,9 @@ Test LHE:
     RunIIFall18wmLHEGS-00000.root ---> 500 events instead of 54
     
     
+    
+    but it is LHE, then not visible! Confirmed with mu mu
+    
       
 GEN -> AOD 
     
