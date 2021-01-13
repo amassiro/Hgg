@@ -165,8 +165,22 @@ Test LHE:
     
       
 GEN -> AOD 
+     
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18DRPremix-00836_1_cfg.py --eventcontent PREMIXRAW --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM-RAW --fileout file:HIG-RunIIAutumn18DRPremix-00836_0.root --pileup_input "dbs:/Neutrino_E-10_gun/RunIISummer17PrePremix-PUAutumn18_102X_upgrade2018_realistic_v15-v1/GEN-SIM-DIGI-RAW" --conditions 102X_upgrade2018_realistic_v15 --step DIGI,DATAMIX,L1,DIGI2RAW,HLT:@relval2018 --procModifiers premix_stage2 --geometry DB:Extended --filein "dbs:/ZH_HToCC_ZToNuNu_M125_13TeV_powheg_pythia8/RunIIFall18wmLHEGS-102X_upgrade2018_realistic_v11-v1/GEN-SIM" --datamix PreMix --era Run2_2018 --no_exec --mc -n $EVENTS || exit $? ;
+
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18DRPremix-00836_2_cfg.py --eventcontent AODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier AODSIM --fileout file:HIG-RunIIAutumn18DRPremix-00836.root --conditions 102X_upgrade2018_realistic_v15 --step RAW2DIGI,L1Reco,RECO,RECOSIM,EI --procModifiers premix_stage2 --filein file:HIG-RunIIAutumn18DRPremix-00836_0.root --era Run2_2018 --runUnscheduled --no_exec --mc -n $EVENTS || exit $? ;
+
     
     
+    
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18DRPremix-00836_1_cfg.py --eventcontent PREMIXRAW --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM-RAW --fileout file:HIG-RunIIAutumn18DRPremix-00836_0.root --pileup_input "dbs:/Neutrino_E-10_gun/RunIISummer17PrePremix-PUAutumn18_102X_upgrade2018_realistic_v15-v1/GEN-SIM-DIGI-RAW" --conditions 102X_upgrade2018_realistic_v15 --step DIGI,DATAMIX,L1,DIGI2RAW,HLT:@relval2018 --procModifiers premix_stage2 --geometry DB:Extended --filein "file:RunIIFall18wmLHEGS-00000-Zlep-Hgluglu-500-evts.root" --datamix PreMix --era Run2_2018 --no_exec --mc -n 500
+    
+    
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18DRPremix-00836_2_cfg.py --eventcontent AODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier AODSIM --fileout file:HIG-RunIIAutumn18DRPremix-00836.root --conditions 102X_upgrade2018_realistic_v15 --step RAW2DIGI,L1Reco,RECO,RECOSIM,EI --procModifiers premix_stage2 --filein file:HIG-RunIIAutumn18DRPremix-00836_0.root --era Run2_2018 --runUnscheduled --no_exec --mc -n 500
+    
+    
+    
+
     
     
     
