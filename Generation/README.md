@@ -180,6 +180,13 @@ GEN -> AOD
     
     
     
+    
+    cmsRun HIG-RunIIAutumn18DRPremix-00836_1_TEST_cfg.py
+    
+    cmsRun HIG-RunIIAutumn18DRPremix-00836_2_cfg.py
+    
+    
+    
 
     
     
