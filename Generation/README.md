@@ -180,14 +180,65 @@ GEN -> AOD
     
     
     
-    
+                                             TEST because I removed some pu input root files
     cmsRun HIG-RunIIAutumn18DRPremix-00836_1_TEST_cfg.py
     
     cmsRun HIG-RunIIAutumn18DRPremix-00836_2_cfg.py
     
     
     
+AOD -> miniAOD 
 
+    cmsrel CMSSW_10_2_3
+    cd CMSSW_10_2_3/src
+    cmsrel
+    
+    https://cms-pdmv.cern.ch/mcm/requests?prepid=HIG-RunIIAutumn18MiniAOD-00836&page=0&shown=127
+    
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18MiniAOD-00836_1_cfg.py --eventcontent MINIAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier MINIAODSIM --fileout file:HIG-RunIIAutumn18MiniAOD-00836.root --conditions 102X_upgrade2018_realistic_v15 --step PAT --geometry DB:Extended --filein "dbs:/ZH_HToCC_ZToNuNu_M125_13TeV_powheg_pythia8/RunIIAutumn18DRPremix-102X_upgrade2018_realistic_v15-v1/AODSIM" --era Run2_2018 --runUnscheduled --no_exec --mc -n  500
+    
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18MiniAOD-00836_1_cfg.py --eventcontent MINIAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier MINIAODSIM --fileout file:HIG-RunIIAutumn18MiniAOD-00836.root --conditions 102X_upgrade2018_realistic_v15 --step PAT --geometry DB:Extended --filein "file:HIG-RunIIAutumn18DRPremix-00836.root" --era Run2_2018 --runUnscheduled --no_exec --mc -n  500
+    
+    cmsRun HIG-RunIIAutumn18MiniAOD-00836_1_cfg.py
+    
+    
+miniAOD -> nanoAOD 
+
+    cmsrel CMSSW_10_2_22
+    cd CMSSW_10_2_22/src
+    cmsenv
+    
+
+    https://cms-pdmv.cern.ch/mcm/requests?prepid=HIG-RunIIAutumn18NanoAODv7-00900&page=0&shown=127
+    
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py --eventcontent NANOEDMAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier NANOAODSIM --fileout file:HIG-RunIIAutumn18NanoAODv7-00900.root --conditions 102X_upgrade2018_realistic_v21 --step NANO --filein "dbs:/ZH_HToCC_ZToNuNu_M125_13TeV_powheg_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM" --era Run2_2018,run2_nanoAOD_102Xv1 --no_exec --mc -n 500
+    
+    cmsDriver.py  --python_filename HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py --eventcontent NANOEDMAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier NANOAODSIM --fileout file:HIG-RunIIAutumn18NanoAODv7-00900.root --conditions 102X_upgrade2018_realistic_v21 --step NANO --filein "file:HIG-RunIIAutumn18MiniAOD-00836.root" --era Run2_2018,run2_nanoAOD_102Xv1 --no_exec --mc -n 500
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
