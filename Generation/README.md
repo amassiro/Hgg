@@ -217,9 +217,85 @@ miniAOD -> nanoAOD
     
 Post processing:
 
+    from Jie/Elena
+    
+    
+    cmsrel CMSSW_10_6_4
+    cd CMSSW_10_6_4/src
+    cmsenv
+    git clone --branch 13TeV git@github.com:latinos/setup.git LatinosSetup
+    source LatinosSetup/SetupShapeOnly.sh
+    scramv1 b -j 20
+
+    Copy the file LatinoAnalysis/Tools/python/userConfig_TEMPLATE.py to LatinoAnalysis/Tools/python/userConfig.py and edit it to reflect your local paths.
+
+    
+    
+
+    1. Change the Sites_cfg.py in NanoGardener/python/framework/Sites_cfg.py , I want to send output files in my eos folder, so I changed content of the key 'cern', you can look at here:
+    example:               'treeBaseDir' : '/eos/user/j/jixiao/HWWnano3/eft/' ,
+                           'treeBaseDir' : '/eos/user/a/amassiro/Hgg/Trees/' ,
+
+                           cp /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Generation/CMSSW_10_2_22/src/HIG-RunIIAutumn18NanoAODv7-00900.root /eos/user/a/amassiro/Hgg/Trees/
+                           
     
     
     
+    2. To make the framework input root files in your eos (I suggest to put your private nanoAOD in your eos folder), then you need to change PostProcMaker.py:
+                           
+                           LatinoAnalysis/NanoGardener/python/framework/PostProcMaker.py
+    
+    change this line to: self._aaaXrootd = 'root://eosuser.cern.ch/'
+
+    
+    
+    3. Add your samples, I suggest you to add in samples/Autumn18_102X_nAODv7.py, if you put your private nanoAOD root files in eos.
+    
+                           LatinoAnalysis/NanoGardener/python/framework/samples/Autumn18_102X_nAODv7.py
+    
+    Here is an example:
+        
+        Samples['hmn_m50']={'srmPrefix':'gsiftp://eosuserftp.cern.ch/','paths' :['/eos/user/j/jixiao/eft/hmn_2018/HeavyN_SSWW_MuMu_onlyVmuN1_M50/']}
+        Samples['hgg']={'srmPrefix':'gsiftp://eosuserftp.cern.ch/','paths' :['/eos/user/a/amassiro/Hgg/Trees/']}
+    
+    We need to add 'srmPrefix', and eos folder, it's different from official samples.
+ 
+ 
+ 
+    4. Add your samples cross sections in samples/samplesCrossSections2018.py
+
+                               LatinoAnalysis/NanoGardener/python/framework/samples/samplesCrossSections2018.py
+
+                               
+<!--     cp /afs/cern.ch/work/j/jixiao/public/forElena/framework/PostProcMaker.py ./ -->
+<!--     cp /afs/cern.ch/work/j/jixiao/public/forElena/framework/FatJetCorrHelper.py ./ -->
+<!--     cp /afs/cern.ch/work/j/jixiao/public/forElena/framework/Steps_cfg.py ./        LatinoAnalysis/NanoGardener/python/framework/Steps_cfg.py -->
+
+    Then you can set voms proxy, and run the 1st step, e.g.,
+
+        voms-proxy-init -voms cms -rfc --valid 168:0
+
+    1st step
+    mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s MCl1loose2018v7 -b -Q workday -T hgg --dry
+    mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s MCl1loose2018v7 -b -Q workday -T hgg
+    
+    2nd step:
+    mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s MCCorr2018v7 -i MCl1loose2018v7 -b -Q workday -T hgg
+    
+    3rd step:
+    mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s l2loose -i MCl1loose2018v7__MCCorr2018v7 -b -Q workday -T hgg
+    
+    Se questo step non va cambiare il path qui https://github.com/latinos/LatinoAnalysis/blob/fe4fab267c5f1b7afdc8ddcf8804c4c7ae7d17f3/NanoGardener/python/data/DYSFmva/2018_alt/TMVAClassification_PyKeras_2018_2j.weights.xml#L22 nei file 
+    TMVAClassification_PyKeras_2018_0j.weights.xml
+    TMVAClassification_PyKeras_2018_1j.weights.xml
+    TMVAClassification_PyKeras_2018_2j.weights.xml
+    TMVAClassification_PyKeras_2018_VBF.weights.xml
+    TMVAClassification_PyKeras_2018_VH.weights.xml
+    
+    4th step:
+    mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s l2tightOR2018v7 -i MCl1loose2018v7__MCCorr2018v7__l2loose -b -Q workday -T YOUR_SAMPLE_NAME
+        
+        
     
     
     
