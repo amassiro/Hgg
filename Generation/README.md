@@ -255,8 +255,7 @@ Post processing:
     
     Here is an example:
         
-        Samples['hmn_m50']={'srmPrefix':'gsiftp://eosuserftp.cern.ch/','paths' :['/eos/user/j/jixiao/eft/hmn_2018/HeavyN_SSWW_MuMu_onlyVmuN1_M50/']}
-        Samples['hgg']={'srmPrefix':'gsiftp://eosuserftp.cern.ch/','paths' :['/eos/user/a/amassiro/Hgg/Trees/']}
+        Samples['hgg']={'srmPrefix':'root://eosuser.cern.ch/','paths' :['/eos/user/a/amassiro/Hgg/Trees/']}
     
     We need to add 'srmPrefix', and eos folder, it's different from official samples.
  
