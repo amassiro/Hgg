@@ -275,7 +275,6 @@ Post processing:
         voms-proxy-init -voms cms -rfc --valid 168:0
 
     1st step
-    mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s MCl1loose2018v7 -b -Q workday -T hgg --dry
     mkPostProc.py -p Autumn18_102X_nAODv7_Full2018v7 -s MCl1loose2018v7 -b -Q workday -T hgg
     
     2nd step:
