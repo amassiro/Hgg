@@ -270,6 +270,9 @@ Post processing:
 <!--     cp /afs/cern.ch/work/j/jixiao/public/forElena/framework/FatJetCorrHelper.py ./ -->
 <!--     cp /afs/cern.ch/work/j/jixiao/public/forElena/framework/Steps_cfg.py ./        LatinoAnalysis/NanoGardener/python/framework/Steps_cfg.py -->
 
+    fix of file: /afs/cern.ch/work/a/amassiro/Latinos/Framework/Postprocessing/Hgg/CMSSW_10_6_4/python/LatinoAnalysis/NanoGardener/modules/FatJetCorrHelper.py
+    to remove the "redoJEC=redojec,"  ---> why???
+
     Then you can set voms proxy, and run the 1st step, e.g.,
 
         voms-proxy-init -voms cms -rfc --valid 168:0
