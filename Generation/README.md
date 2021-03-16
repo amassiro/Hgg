@@ -200,6 +200,8 @@ AOD -> miniAOD
     
 miniAOD -> nanoAOD 
 
+    (or cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Generation/CMSSW_10_2_22/src)
+
     cmsrel CMSSW_10_2_22
     cd CMSSW_10_2_22/src
     cmsenv
