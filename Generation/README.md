@@ -188,7 +188,9 @@ GEN -> AOD
     
     
 AOD -> miniAOD 
-    
+
+    (or cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Generation/CMSSW_10_2_3/src)
+
     https://cms-pdmv.cern.ch/mcm/requests?prepid=HIG-RunIIAutumn18MiniAOD-00836&page=0&shown=127
     
     cmsDriver.py  --python_filename HIG-RunIIAutumn18MiniAOD-00836_1_cfg.py --eventcontent MINIAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier MINIAODSIM --fileout file:HIG-RunIIAutumn18MiniAOD-00836.root --conditions 102X_upgrade2018_realistic_v15 --step PAT --geometry DB:Extended --filein "dbs:/ZH_HToCC_ZToNuNu_M125_13TeV_powheg_pythia8/RunIIAutumn18DRPremix-102X_upgrade2018_realistic_v15-v1/AODSIM" --era Run2_2018 --runUnscheduled --no_exec --mc -n  500
