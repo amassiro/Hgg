@@ -217,6 +217,8 @@ miniAOD -> nanoAOD
     
     cmsRun HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py
     
+    edmDumpEventContent HIG-RunIIAutumn18NanoAODv7-00900.root > dump_nanoaod.txt
+
     
     
 Post processing:
