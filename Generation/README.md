@@ -219,7 +219,10 @@ miniAOD -> nanoAOD
     
     edmDumpEventContent HIG-RunIIAutumn18NanoAODv7-00900.root > dump_nanoaod.txt
 
+    missing all objects???
     
+    check with:
+    edmConfigDump HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py > dump_HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py
     
 Post processing:
 
