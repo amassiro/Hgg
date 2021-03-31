@@ -224,6 +224,8 @@ miniAOD -> nanoAOD
     check with:
     edmConfigDump HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py > dump_HIG-RunIIAutumn18NanoAODv7-00900_1_cfg.py
     
+    why keep * is crashing?
+    
 Post processing:
 
     from Jie/Elena
