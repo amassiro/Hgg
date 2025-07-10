@@ -20,6 +20,34 @@ Purpose: up to nanoaod in one step
 ZH, Z>ll, H>gg
 
 
+```
+cmsrel CMSSW_10_6_30
+cd CMSSW_10_6_30/src
+cmsenv
+git-cms-init
+
+
+voms-proxy-init --rfc --voms cms -valid 193:00
+
+cmsRun -e -j FrameworkJobReport.xml sim_step.py inputName=genStep.root outputName=simStep.root
+cmsRun -e -j FrameworkJobReport.xml digi_raw_step.py inputName=simStep.root outputName=digirawStep.root
+
+cd ~/work/Generation/CMSSW_10_2_16_UL/src/
+cmsenv
+cd -
+
+cmsRun -e -j FrameworkJobReport.xml hlt_step.py inputName=digirawStep.root outputName=hltStep.root
+
+cd -
+cmsenv
+
+cmsRun -e -j FrameworkJobReport.xml reco_step.py  inputName=hltStep.root outputName=recoStep.root 
+cmsRun -e -j FrameworkJobReport.xml miniaod_step.py  inputName=recoStep.root outputName=miniaodStep.root
+cmsRun -e -j FrameworkJobReport.xml nanoaod_step.py   inputName=miniaodStep.root    outputName=nanoaodStep.root
+
+
+
+```
 
 
 
