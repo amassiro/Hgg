@@ -1,6 +1,37 @@
 Generation
 ====
 
+Code from: 
+
+    https://github.com/GiacomoBoldrini/3DYGeneration/tree/master
+
+and
+
+    https://github.com/UniMiBAnalyses/CMSSWGeneration/blob/HHbbtautau/crab_miniaod_production/Era2018UL/ZH_HToGluGlu_ZToLL_powheg_pythia8/README.md
+
+
+Purpose: up to nanoaod in one step
+
+1) local test
+
+2) submission on crab
+
+
+ZH, Z>ll, H>gg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2018: starting point
 
     /HWplusJ_HToWWTo2L2Nu_WTo2L_M125_13TeV_powheg_pythia8_TuneCP5_PSweights/RunIIAutumn18NanoAODv7-Nano02Apr2020_102X_upgrade2018_realistic_v21-v1/NANOAODSIM
