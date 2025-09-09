@@ -13,10 +13,12 @@ Tutorials:
 
     https://indico.cern.ch/event/1414035/sessions/547182/#20240524
     
-    
+Where:
+
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Hgg/
 
     
-Step by Step
+Step by Step installation
 
     
     cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/
@@ -26,6 +28,12 @@ Step by Step
     source install.sh
 
     
+Step by Step use
+
+    
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
+    source start.sh
+
     
 
 Test 1
