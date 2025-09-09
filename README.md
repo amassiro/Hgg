@@ -28,12 +28,23 @@ Step by Step installation
     source install.sh
 
     
+Install PlotsConfigurationRun3
+    
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/
+    git clone git@github.com:latinos/PlotsConfigurationsRun3.git 
+
+
+
 Step by Step use
 
     
     cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
     source start.sh
 
+    
+    cd ../PlotsConfigurationsRun3/Hgg/
+    
+    
     
 
 Test 1
