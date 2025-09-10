@@ -45,7 +45,12 @@ Step by Step use
     cd ../PlotsConfigurationsRun3/Hgg/
     
     
+
     
+Post-processing private sample
+
+    /ZH_HToGluGlu_ZToLL_13TeV_powheg_pythia8/rgerosa-RunIISummer20UL18NanoAODv9_106X_upgrade2018_realistic_v11_L1v1-MINIAODSIM-00000000000000000000000000000000/USER
+
 
 Test 1
 
