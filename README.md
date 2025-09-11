@@ -50,8 +50,21 @@ Step by Step use
 Post-processing private sample
 
     /ZH_HToGluGlu_ZToLL_13TeV_powheg_pythia8/rgerosa-RunIISummer20UL18NanoAODv9_106X_upgrade2018_realistic_v11_L1v1-MINIAODSIM-00000000000000000000000000000000/USER
+    some files here: /eos/user/a/amassiro/HIG/ZHgg
 
 
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
+    source start.sh
+
+    
+    store: /eos/user/a/amassiro/HIG/ZHggPostProc/
+    
+    
+    mkPostProc -o 0 -p Summer22_130x_nAODv12_Full2022v12 -s MCl1loose2022v12__MCCorr2022v12 -T ggWW_LL -dR 1
+    
+    
+    
+    
 Test 1
 
     ZH>gg
