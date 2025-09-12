@@ -41,7 +41,6 @@ Step by Step use
     cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
     source start.sh
 
-    
     cd ../PlotsConfigurationsRun3/Hgg/
     
     
@@ -74,6 +73,7 @@ Post-processing private sample
     python /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/ZHgg__part0/script.py
     
     
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg
     
     
 Test 1
