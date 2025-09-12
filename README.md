@@ -60,7 +60,18 @@ Post-processing private sample
     store: /eos/user/a/amassiro/HIG/ZHggPostProc/
     
     
+    alias vomsgrid='voms-proxy-init --rfc --voms cms -valid 193:00'
+
+    vomsgrid
+    
     mkPostProc -o 0 -p Summer22_130x_nAODv12_Full2022v12 -s MCl1loose2022v12__MCCorr2022v12 -T ggWW_LL -dR 1
+    
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg -dR 1
+    
+    jobs in: /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor
+    
+    interactive mode:
+    python /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/ZHgg__part0/script.py
     
     
     
