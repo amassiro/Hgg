@@ -76,6 +76,12 @@ Post-processing private sample
     mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg
     
     
+    
+    output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/
+    
+    
+    
+    
 Test 1
 
     ZH>gg
