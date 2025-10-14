@@ -89,7 +89,9 @@ Post-processing private sample
     
     output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/
     
-     
+    
+    Expected: ~150 events of signal in 2018
+    
      
     
     
