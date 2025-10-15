@@ -93,7 +93,25 @@ Post-processing private sample
     Expected: ~150 events of signal in 2018
     
      
+Optimization:
+
+
+
+    cuts['Sig'] = {
+        'expr' : 'Alt(Lepton_pt,2,0) < 15 && (abs(Lepton_pdgId[0])==abs(Lepton_pdgId[1])) && Alt(CleanJet_pt,2,0) < 30 && Alt(CleanJet_pt,1,0) > 30',
+        'categories' : {
+            'mllZ'               : 'mll>80 && mll< 100',
+            'mllZpt1'            : 'mll>80 && mll< 100 && Lepton_pt[0]>40',
+            'mllZpt1qgl'         : 'mll>80 && mll< 100 && Lepton_pt[0]>40 && Alt(Jet_qgl,CleanJet_jetIdx[0],2)<0.5 && Alt(Jet_qgl,CleanJet_jetIdx[1],2)<0.5',
+            'mllZpt1qglmet'      : 'mll>80 && mll< 100 && Lepton_pt[0]>40 && Alt(Jet_qgl,CleanJet_jetIdx[0],2)<0.5 && Alt(Jet_qgl,CleanJet_jetIdx[1],2)<0.5 && PuppiMET_pt<60',
+            'mllZpt1qglmetbVeto' : 'mll>80 && mll< 100 && Lepton_pt[0]>40 && Alt(Jet_qgl,CleanJet_jetIdx[0],2)<0.5 && Alt(Jet_qgl,CleanJet_jetIdx[1],2)<0.5 && PuppiMET_pt<60 && bVeto',
+            'opt1'               : 'mll>80 && mll< 100 && Lepton_pt[0]>40 && Alt(Jet_qgl,CleanJet_jetIdx[0],2)<0.5 && Alt(Jet_qgl,CleanJet_jetIdx[1],2)<0.5 && PuppiMET_pt<60 && bVeto && detajj<3',
+            'opt2'               : 'mll>80 && mll< 100 && Lepton_pt[0]>40 && Alt(Jet_qgl,CleanJet_jetIdx[0],2)<0.5 && Alt(Jet_qgl,CleanJet_jetIdx[1],2)<0.5 && PuppiMET_pt<60 && bVeto && detajj<3 && mjj<160 && mjj>60 && dphilljetjet>1',
+            'opt3'               : 'mll>80 && mll< 100 && Lepton_pt[0]>40 && Alt(Jet_qgl,CleanJet_jetIdx[0],2)<0.5 && Alt(Jet_qgl,CleanJet_jetIdx[1],2)<0.5 && PuppiMET_pt<60 && bVeto && detajj<3 && mjj<160 && mjj>60 && dphilljetjet>1 && Alt(Jet_btagDeepB,CleanJet_jetIdx[0],2)<0.2 && Alt(Jet_btagDeepB,CleanJet_jetIdx[1],2) < 0.2 && Alt(Jet_btagCSVV2,CleanJet_jetIdx[0],2)<0.7 && Alt(Jet_btagCSVV2,CleanJet_jetIdx[1],2)<0.7',
+      }
+    }
     
+
     
 Test 1
 
