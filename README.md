@@ -46,7 +46,7 @@ Step by Step use
     
 
     
-Post-processing private sample
+Post-processing private sample 2018
 
     /ZH_HToGluGlu_ZToLL_13TeV_powheg_pythia8/rgerosa-RunIISummer20UL18NanoAODv9_106X_upgrade2018_realistic_v11_L1v1-MINIAODSIM-00000000000000000000000000000000/USER
     some files here: /eos/user/a/amassiro/HIG/ZHgg
@@ -92,6 +92,39 @@ Post-processing private sample
     
     Expected: ~150 events of signal in 2018
     
+    
+    Units in pb
+    From https://twiki.cern.ch/twiki/pub/LHCPhysics/HiggsXSBR/Higgs_XSBR_YR4_update.xlsx
+    8.839E-01 pb
+    and the branching ratio: 
+    https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
+    8.187E-02
+    BR Z>ll:  3.3658% x 3
+    From https://pdg.lbl.gov/2018/listings/rpp2018-list-z-boson.pdf
+
+    ZH_HToGluGlu_ZToLL_13TeV_powheg_pythia8
+
+    59000×0.8839×0.08187×0.033658×3
+
+
+Post-processing private sample 2017
+
+    /ZH_HToGluGlu_ZToLL/amassiro-RunIISummer20UL17NanoAODv9_106X_mc2017_realistic_v6-MINIAODSIM-00000000000000000000000000000000/USER
+
+
+
+Ideas:
+
+    - try Dr_jj to select Jets
+    - find a way to estimate DY from data (zeta method from run1? ptll too low for photon trigger), functional form?
+    - check higgs decay: Pythia and effective coupling to gluons?
+    - extend to full run 2 and start looking at run 3 -> many areas to contribute to
+    - contact with boosted Hgg analysers
+    - show in higgs rare group L3
+
+
+
+
      
 Optimization:
 
@@ -112,7 +145,7 @@ Optimization:
     }
     
 
-    
+
 Test 1
 
     ZH>gg
