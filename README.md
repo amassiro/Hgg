@@ -111,6 +111,42 @@ Post-processing private sample 2017
 
     /ZH_HToGluGlu_ZToLL/amassiro-RunIISummer20UL17NanoAODv9_106X_mc2017_realistic_v6-MINIAODSIM-00000000000000000000000000000000/USER
 
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
+    source start.sh
+
+
+    store: /eos/user/a/amassiro/HIG/ZHggPostProc/
+
+
+    alias vomsgrid='voms-proxy-init --rfc --voms cms -valid 193:00'
+
+    vomsgrid
+
+    mkPostProc -o 0 -p Summer20UL17_106x_nAODv9_Full2017v9 -s MCFull2017v9 -T ZHgg -dR 1
+
+    jobs in: /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor
+
+    interactive mode:
+    python /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor/Summer20UL17_106x_nAODv9_Full2017v9/MCFull2017v9/ZHgg__part0/script.py
+
+
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg
+
+
+
+    output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL17_106x_nAODv9_Full2017v9/MCFull2017v9/
+
+
+    Need more steps ...
+    MCl1loose2018v9__MCCorr2018v9NoJERInHorn__l2tightOR2018v9
+    At least: MCCorr2018v9, now added in the step "MCFull2018v9"
+
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg
+
+
+    output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/
+
+
 
 
 Ideas:
