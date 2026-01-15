@@ -130,22 +130,11 @@ Post-processing private sample 2017
     python /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor/Summer20UL17_106x_nAODv9_Full2017v9/MCFull2017v9/ZHgg__part0/script.py
 
 
-    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg
+    mkPostProc -o 0 -p Summer20UL17_106x_nAODv9_Full2017v9 -s MCFull2017v9 -T ZHgg
 
 
 
     output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL17_106x_nAODv9_Full2017v9/MCFull2017v9/
-
-
-    Need more steps ...
-    MCl1loose2018v9__MCCorr2018v9NoJERInHorn__l2tightOR2018v9
-    At least: MCCorr2018v9, now added in the step "MCFull2018v9"
-
-    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHgg
-
-
-    output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/
-
 
 
 
@@ -202,4 +191,31 @@ Where generation:
 Plot significance
 
     r99t significance.cxx
+
+
+
+2018 sample by IHEP:
+
+    xrdfs cceos.ihep.ac.cn:1094 ls /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/
+    including WH production
+
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WplusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8
+
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WplusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
+    /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
+
+
+    xrdcp -r cceos.ihep.ac.cn:1094  /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0    /tmp/amassiro/
+
+
+
 
