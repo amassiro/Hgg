@@ -214,7 +214,63 @@ Plot significance
     /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0
 
 
-    xrdcp -r cceos.ihep.ac.cn:1094  /store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0    /tmp/amassiro/
+    /eos/user/a/amassiro/HIG/
+    /eos/user/a/amassiro/HIG/Hgg
+
+    mkdir /eos/user/a/amassiro/HIG/Hgg/
+
+    mkdir /eos/user/a/amassiro/HIG/Hgg/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+    mkdir /eos/user/a/amassiro/HIG/Hgg/WplusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+    mkdir /eos/user/a/amassiro/HIG/Hgg/ZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/
+    mkdir /eos/user/a/amassiro/HIG/Hgg/ZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+    mkdir /eos/user/a/amassiro/HIG/Hgg/ggZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/
+    mkdir /eos/user/a/amassiro/HIG/Hgg/ggZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+
+
+
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0/   /tmp/amassiro/
+
+
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0/     /eos/user/a/amassiro/HIG/Hgg/WminusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/WplusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-WHGG0/      /eos/user/a/amassiro/HIG/Hgg/WplusH_HToGG_WToLNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-ZHGG0           /eos/user/a/amassiro/HIG/Hgg/ZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-ZHGG0         /eos/user/a/amassiro/HIG/Hgg/ggZH_HToGG_ZToLL_M-125_TuneCP5_13TeV-powheg-pythia8/
+
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-ZHGG0         /eos/user/a/amassiro/HIG/Hgg/ZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+    xrdcp -r root://cceos.ihep.ac.cn:1094//store/user/zkou/CustomizedNanoAOD/V0/2018/MC/ggZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/HIG-RunIISummer20UL18MiniAODv2-ZHGG0       /eos/user/a/amassiro/HIG/Hgg/ggZH_HToGG_ZToNuNu_M-125_TuneCP5_13TeV-powheg-pythia8/
+
+
+Post-processing private sample 2018
+
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
+    source start.sh
+
+    vomsgrid
+
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T WpluslvHgg    -dR 1   --inputFolder True  --isLatino False
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T WminuslvHgg   -dR 1   --inputFolder True  --isLatino False
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHllHgg       -dR 1   --inputFolder True  --isLatino False
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ggZHllHgg     -dR 1   --inputFolder True  --isLatino False
+
+
+    jobs in: /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor
+
+    interactive mode:
+    python /afs/cern.ch/work/a/amassiro/Latinos/Framework/Hgg/Analysis/mkShapesRDF/mkShapesRDF/processor/condor/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/WpluslvHgg__part0/script.py
+
+
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T WpluslvHgg       --inputFolder True  --isLatino False
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T WminuslvHgg      --inputFolder True  --isLatino False
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ZHllHgg          --inputFolder True  --isLatino False
+    mkPostProc -o 0 -p Summer20UL18_106x_nAODv9_Full2018v9 -s MCFull2018v9 -T ggZHllHgg        --inputFolder True  --isLatino False
+
+
+    output is here: /eos/user/a/amassiro/HIG/ZHggPostProc/Summer20UL18_106x_nAODv9_Full2018v9/MCFull2018v9/
+
+
+Analysis:
+
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/PlotsConfigurationsRun3/Hgg/2018UL1l
 
 
 
