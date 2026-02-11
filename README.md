@@ -109,7 +109,13 @@ Post-processing private sample 2018
 
 Post-processing private sample 2017
 
+    /qqZH_HToGluGlu_ZToLL/amassiro-RunIISummer20UL17NanoAODv9_106X_mc2017_realistic_v6-MINIAODSIM-00000000000000000000000000000000/USER
+    /ggZH_HToGluGlu_ZToLL/amassiro-RunIISummer20UL17NanoAODv9_106X_mc2017_realistic_v6-MINIAODSIM-00000000000000000000000000000000/USER
+
+
     /ZH_HToGluGlu_ZToLL/amassiro-RunIISummer20UL17NanoAODv9_106X_mc2017_realistic_v6-MINIAODSIM-00000000000000000000000000000000/USER
+    --> actually H to all
+
 
     cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Hgg/Analysis/mkShapesRDF/
     source start.sh
